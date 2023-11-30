@@ -32,7 +32,7 @@ def iot():
         response_json = json.loads(response.json())
 
         result = str(response_json["result"])
-        text = 'ANOMALOUS' if result == '0' else 'NORMAL'
+        text = 'ANOMALOUS' if result == '1' else 'NORMAL'
         print(f"[{datetime.datetime.now()}] Wind turbine sensor status -> {text}")
 
 
